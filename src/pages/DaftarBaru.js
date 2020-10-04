@@ -148,13 +148,13 @@ class PendaftaranUser extends Component {
                         <input type="text" value={this.state.nama} onChange={this.handleNamaChange}></input>
                         <br />
                         <label>Email</label>
-                        <input type="text" value={this.state.email} onChange={this.handleEmailChange}></input>
+                        <input type="email" value={this.state.email} onChange={this.handleEmailChange}></input>
                         <br />
                         <label>Password</label>
-                        <input type="text" value={this.state.password} onChange={this.handlePasswordChange}></input>
+                        <input type="password" value={this.state.password} onChange={this.handlePasswordChange}></input>
                         <br />
                         <label>Repassword</label>
-                        <input type="text" value={this.state.repassword} onChange={this.handleRepasswordChange}></input>
+                        <input type="password" value={this.state.repassword} onChange={this.handleRepasswordChange}></input>
                         <br />
                         <label>Jenis Kelamin</label>
                         <input type="text" value={this.state.jeniskelamin} onChange={this.handleJenisKelaminChange}></input>
@@ -169,10 +169,10 @@ class PendaftaranUser extends Component {
                         <input type="text" value={this.state.telepon} onChange={this.handleTeleponChange}></input>
                         <br />
                         <label>Alasan Bergabung</label>
-                        <input type="text" value={this.state.alasan} onChange={this.handleAlasanChange}></input>
+                        <input type="textarea" value={this.state.alasan} onChange={this.handleAlasanChange}></input>
                         <br />
                         <label>Tanggal Lahir</label>
-                        <input type="text" value={this.state.tanggallahir} onChange={this.handleTanggalLahirChange}></input>
+                        <input type="date" value={this.state.tanggallahir} onChange={this.handleTanggalLahirChange}></input>
                         <br />
     
                         <br />
