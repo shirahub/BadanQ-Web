@@ -1,6 +1,7 @@
 import React from 'react';
 import { Link } from "react-router-dom"
 import { connect } from 'react-redux';
+import Logo from '../assets/images/logo.png'
 
 let Header = ({ info }) => (
 
@@ -8,6 +9,7 @@ let Header = ({ info }) => (
         {console.log(info)}
         <div className="logo">
             <Link to="/">
+                <img src={Logo} />
                 <h1>BadanQ</h1>
                 <h2>Beautiful Mind, Beautiful Body</h2>
             </Link>
