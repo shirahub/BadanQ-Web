@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
 import { setLogin } from '../actions/index';
+import './Login.css'
 
 
 class Login extends Component {
@@ -54,31 +55,38 @@ class Login extends Component {
 
     render() {
         return (
-            <div className="login-container">
-                <div className="login-form">
-                    <form onSubmit={this.handleSubmit}>
-                        <div>
-                        <label>User Name</label>
-                        <br />
-                        <input type="text" data-test="username" value={this.state.username} onChange={this.handleUserChange} />
-                        </div>
-                        <div>
-                        <label>Password</label>
-                        <br />
-                        <input type="password" data-test="password" value={this.state.password} onChange={this.handlePassChange} />
-                        </div>
-                        <br />
-                        <div>
-                        <input type="submit" value="Log In" data-test="submit" />
-                        </div>
-                    </form>
-                    {
-                        this.state.error &&
-                        <h3 data-test="error" onClick={this.dismissError}>
-                            
-                            {this.state.error}
-                        </h3>
-                    }
+            <div style={{display:"flex"}}>
+                <div className="login-container" 
+                    style={{
+                        width:"30%",
+                        minWidth:"320px",
+                        flex:"none"
+                    }}>
+                        <form onSubmit={this.handleSubmit} style={{width:'100%'}}>
+                            <h2 className="login-text">Log In</h2>
+                            <label>User Name</label>
+                            <input type="text" data-test="username" value={this.state.username} onChange={this.handleUserChange} />
+                            <label>Password</label>
+                            <input type="password" data-test="password" value={this.state.password} onChange={this.handlePassChange} />
+                            <input className="button" type="submit" value="Log In" data-test="submit" />
+                        </form>
+                        <br/>
+                        {
+                            this.state.error &&
+                            <h3 className="error-message" data-test="error" onClick={this.dismissError}>
+                                {this.state.error}
+                            </h3>
+                        }
+                </div>
+                <div className="loginpict"
+                    
+                        style={{
+                            margin:"auto",
+                            flex:"1 1 0%",
+                        }}
+                    >
+                        <img 
+                        src="https://image.freepik.com/free-vector/registration-online-concept_23-2147987277.jpg"/>
                 </div>
             </div>
         );

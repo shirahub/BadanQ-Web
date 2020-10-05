@@ -127,20 +127,12 @@ class PendaftaranUser extends Component {
     daftarBaru() {
         console.log("DaftarBaru", this.state.tanggallahir)
         return (
-            <div>
-                <div style={{
-                    display:"flex",
-                    float:"right",
-                    width:"65%"
-                }}>
-                    <img src="https://image.freepik.com/free-vector/online-registration-concept-with-isometric-view_23-2147976707.jpg" alt="Register" />
-                </div>
-                
+            <div style={{display:"flex"}}>
+                              
                 <div className="container" 
                 style={{
-                    display:"flex",
-                    float:"left",
-                    width:"30%"
+                    width:"30%",
+                    minWidth:"320px"
                 }}>
                     <form onSubmit={this.handleSubmit} style={{width:'100%'}}>
                         <h2 className="register">Register</h2>
@@ -184,6 +176,18 @@ class PendaftaranUser extends Component {
                             </p>
                         }
                     </form>
+                </div>
+                <div className="homepict"
+                
+                    style={{
+                    
+                        margin:"auto",
+							marginTop:"0",
+                        flex:"1 1 0%",
+                    }}
+                >
+                    <img 
+                    src="https://image.freepik.com/free-vector/online-registration-concept-with-isometric-view_23-2147976707.jpg" alt="Register" />
                 </div>
             </div>
         )
