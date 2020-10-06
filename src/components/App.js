@@ -16,9 +16,9 @@ let App = ({info}) => (
   <div >
     <Router>
       {userOn(info.isLogin)}
-      <FirebaseContext.Consumer>
+      {/* <FirebaseContext.Consumer>
         {checkFirebase()}
-      </FirebaseContext.Consumer>
+      </FirebaseContext.Consumer> */}
           <Header />
           <Switch>
           <Route path="/" exact>
@@ -43,11 +43,11 @@ let App = ({info}) => (
 
 )
 
-const checkFirebase = () => {
-  return firebase => (
-    <div>Firebase sukses!</div>
-  )
-}
+// const checkFirebase = () => {
+//   return firebase => (
+//     <div>Firebase sukses!</div>
+//   )
+// }
 
 const userOn = (user) => {
   console.log(user)

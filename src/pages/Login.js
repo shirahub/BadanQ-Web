@@ -56,7 +56,7 @@ class Login extends Component {
                         <form onSubmit={this.handleSubmit} style={{width:'100%'}}>
                             <h2 className="login-text">Log In</h2>
                             <label>User Name</label>
-                            <input type="text" data-test="username" value={this.state.username} onChange={this.handleUserChange} />
+                            <input type="text" data-test="username" value={this.state.email} onChange={this.handleEmailChange} />
                             <label>Password</label>
                             <input type="password" data-test="password" value={this.state.password} onChange={this.handlePassChange} />
                             <input className="button" type="submit" value="Log In" data-test="submit" />

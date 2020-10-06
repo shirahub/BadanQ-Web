@@ -10,8 +10,6 @@ let Header = ({ info }) => (
         <div className="logo">
             <Link to="/">
                 <img src={Logo} />
-                <h1>BadanQ</h1>
-                <h2>Beautiful Mind, Beautiful Body</h2>
             </Link>
         </div>
         <div className="login">
