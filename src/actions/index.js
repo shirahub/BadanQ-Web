@@ -1,14 +1,12 @@
-export const setLogin = (user, id, role) => ({
+export const login = (email, password) => ({
     type: "LOGIN",
-    user: user,
-    id: id,
-    role: role
+    email: email,
+    password: password,
 })
 
 export const setLogout = () => ({
     type: "LOGOUT",
     user: '',
-    id: '',
     role: '',
 })
 

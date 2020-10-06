@@ -4,7 +4,6 @@ import { setLogout } from '../actions/index';
 
 
 class Logout extends Component {
-
     render() {
         this.props.logoutOK()
         return (
@@ -22,6 +21,5 @@ const mapDispatchToProps = (dispatch) => ({
 })
 
 Logout = connect(null, mapDispatchToProps)(Logout)
-
 
 export default Logout;

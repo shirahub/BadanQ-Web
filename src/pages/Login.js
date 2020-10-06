@@ -1,52 +1,43 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
-import { setLogin } from '../actions/index';
+import { login } from '../actions/index';
 
 
 class Login extends Component {
     constructor(props) {
         super(props);
         this.state = {
-            username: '',
+            email: '',
             password: '',
             error: '',
         };
-
-        this.handlePassChange = this.handlePassChange.bind(this);
-        this.handleUserChange = this.handleUserChange.bind(this);
-        this.handleSubmit = this.handleSubmit.bind(this);
-        this.dismissError = this.dismissError.bind(this);
     }
 
-    dismissError() {
+    dismissError = () => {
         this.setState({ error: '' });
     }
 
-    handleSubmit(evt) {
+    handleSubmit = (evt) => {
         evt.preventDefault();
 
-        if (!this.state.username) {
-            return this.setState({ error: 'Username is required' });
+        if (!this.state.email) {
+            return this.setState({ error: 'Mohon masukkan email' });
         }
 
         if (!this.state.password) {
-            return this.setState({ error: 'Password is required' });
+            return this.setState({ error: 'Mohon masukkan password' });
         }
 
-        if (this.state.username === this.props.admin.user && this.state.password === this.props.admin.pass) {
-            this.props.loginOK(this.state.username, this.props.admin.id, 'admin')
-        } else {
-            return this.setState({error:'Username or Password invalid'})
-        }
+        this.props.login(this.state.email, this.state.password)
     }
 
-    handleUserChange(evt) {
+    handleEmailChange = (evt) => {
         this.setState({
-            username: evt.target.value,
+            email: evt.target.value,
         });
     };
 
-    handlePassChange(evt) {
+    handlePassChange = (evt) => {
         this.setState({
             password: evt.target.value,
         });
@@ -60,7 +51,7 @@ class Login extends Component {
                         <div>
                         <label>User Name</label>
                         <br />
-                        <input type="text" data-test="username" value={this.state.username} onChange={this.handleUserChange} />
+                        <input type="text" data-test="email" value={this.state.email} onChange={this.handleEmailChange} />
                         </div>
                         <div>
                         <label>Password</label>
@@ -86,14 +77,12 @@ class Login extends Component {
 }
 
 const mapStateToProps = (state) => ({
-    admin: state.adminlogin.admin
 })
 
 const mapDispatchToProps = (dispatch) => ({
-    loginOK: (user, id, role) => dispatch(setLogin(user, id, role))
+    login: (email, password) => dispatch(login(email, password))
 })
 
 Login = connect(mapStateToProps, mapDispatchToProps)(Login)
-
 
 export default Login;
