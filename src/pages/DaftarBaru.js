@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import { connect } from 'react-redux';
 import { newUser } from '../actions/index';
 import { FirebaseContext } from '../config';
+import './DaftarBaru.css'
 
 
 class PendaftaranUser extends Component {
@@ -126,48 +127,68 @@ class PendaftaranUser extends Component {
     daftarBaru() {
         console.log("DaftarBaru", this.state.tanggallahir)
         return (
-            <div>
-                <form onSubmit={this.handleSubmit} >
-                    <label>Nama</label>
-                    <input type="text" value={this.state.nama} onChange={this.handleNamaChange}></input>
-                    <br />
-                    <label>Email</label>
-                    <input type="text" value={this.state.email} onChange={this.handleEmailChange}></input>
-                    <br />
-                    <label>Password</label>
-                    <input type="text" value={this.state.password} onChange={this.handlePasswordChange}></input>
-                    <br />
-                    <label>Repassword</label>
-                    <input type="text" value={this.state.repassword} onChange={this.handleRepasswordChange}></input>
-                    <br />
-                    <label>Jenis Kelamin</label>
-                    <input type="text" value={this.state.jeniskelamin} onChange={this.handleJenisKelaminChange}></input>
-                    <br />
-                    <label>Pekerjaan</label>
-                    <input type="text" value={this.state.pekerjaan} onChange={this.handlePekerjaanChange}></input>
-                    <br />
-                    <label>Upload Photo</label>
-                    <input type="text" value={this.state.foto} onChange={this.handleFotoChange}></input>
-                    <br />
-                    <label>Nomor Telepon</label>
-                    <input type="text" value={this.state.telepon} onChange={this.handleTeleponChange}></input>
-                    <br />
-                    <label>Alasan Bergabung</label>
-                    <input type="text" value={this.state.alasan} onChange={this.handleAlasanChange}></input>
-                    <br />
-                    <label>Tanggal Lahir</label>
-                    <input type="text" value={this.state.tanggallahir} onChange={this.handleTanggalLahirChange}></input>
-                    <br />
- 
-                    <br />
-                    <input type="submit" value="Daftar"></input>
-                    {
-                        this.state.message &&
-                        <p data-test="message" onClick={this.dismissError}>
-                            {this.state.message}
-                        </p>
-                    }
-                </form>
+            <div style={{display:"flex"}}>
+                              
+                <div className="container" 
+                style={{
+                    width:"30%",
+                    minWidth:"320px"
+                }}>
+                    <form onSubmit={this.handleSubmit} style={{width:'100%'}}>
+                        <h2 className="register">Register</h2>
+                        <label>Nama</label>
+                        <input type="text" value={this.state.nama} onChange={this.handleNamaChange}></input>
+                        <br />
+                        <label>Email</label>
+                        <input type="email" value={this.state.email} onChange={this.handleEmailChange}></input>
+                        <br />
+                        <label>Password</label>
+                        <input type="password" value={this.state.password} onChange={this.handlePasswordChange}></input>
+                        <br />
+                        <label>Repassword</label>
+                        <input type="password" value={this.state.repassword} onChange={this.handleRepasswordChange}></input>
+                        <br />
+                        <label>Jenis Kelamin</label>
+                        <input type="text" value={this.state.jeniskelamin} onChange={this.handleJenisKelaminChange}></input>
+                        <br />
+                        <label>Pekerjaan</label>
+                        <input type="text" value={this.state.pekerjaan} onChange={this.handlePekerjaanChange}></input>
+                        <br />
+                        <label>Upload Photo</label>
+                        <input type="text" value={this.state.foto} onChange={this.handleFotoChange}></input>
+                        <br />
+                        <label>Nomor Telepon</label>
+                        <input type="text" value={this.state.telepon} onChange={this.handleTeleponChange}></input>
+                        <br />
+                        <label>Alasan Bergabung</label>
+                        <input type="textarea" value={this.state.alasan} onChange={this.handleAlasanChange}></input>
+                        <br />
+                        <label>Tanggal Lahir</label>
+                        <input type="date" value={this.state.tanggallahir} onChange={this.handleTanggalLahirChange}></input>
+                        <br />
+    
+                        <br />
+                        <input className="button" type="submit" value="Daftar"></input>
+                        {
+                            this.state.message &&
+                            <p data-test="message" onClick={this.dismissError}>
+                                {this.state.message}
+                            </p>
+                        }
+                    </form>
+                </div>
+                <div className="homepict"
+                
+                    style={{
+                    
+                        margin:"auto",
+							marginTop:"0",
+                        flex:"1 1 0%",
+                    }}
+                >
+                    <img 
+                    src="https://image.freepik.com/free-vector/online-registration-concept-with-isometric-view_23-2147976707.jpg" alt="Register" />
+                </div>
             </div>
         )
     }

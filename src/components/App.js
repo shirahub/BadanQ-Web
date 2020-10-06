@@ -16,9 +16,9 @@ let App = ({info}) => (
   <div >
     <Router>
       {userOn(info.isLogin)}
-      {/* <FirebaseContext.Consumer>
+      <FirebaseContext.Consumer>
         {checkFirebase()}
-      </FirebaseContext.Consumer> */}
+      </FirebaseContext.Consumer>
           <Header />
           <Switch>
           <Route path="/" exact>

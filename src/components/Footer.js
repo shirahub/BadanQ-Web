@@ -8,7 +8,7 @@ export class Footer extends Component {
         return (
         <footer>
             <h5>©BadanQ2020</h5>
-          </footer>
+        </footer>
     )
     }
 }
