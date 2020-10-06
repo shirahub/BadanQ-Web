@@ -11,14 +11,23 @@ import Logout from '../pages/Logout';
 import Home from '../pages/Home';
 import DaftarBaru from '../pages/DaftarBaru';
 import { FirebaseContext } from '../config';
+import CaloriesCalculator from '../pages/user/CaloriesCalculator';
+import InputWeightlossPlan from '../pages/user/InputWeightlossPlan';
+import InputWeightRecord from '../pages/user/InputWeightRecord';
+import BMICalculator from '../pages/user/BMICalculator';
+import UserDashboard from '../pages/user/UserDashboard';
+import InstrukturDashboard from '../pages/instruktur/InstrukturDashboard';
+import BuatKonten from '../pages/instruktur/BuatKonten';
+import BuatProgram from '../pages/instruktur/BuatProgram';
+
 
 let App = ({info}) => (
   <div >
     <Router>
-      {userOn(info.isLogin)}
-      <FirebaseContext.Consumer>
+      {/* {userOn(info.isLogin)} */}
+      {/* <FirebaseContext.Consumer>
         {checkFirebase()}
-      </FirebaseContext.Consumer>
+      </FirebaseContext.Consumer> */}
           <Header />
           <Switch>
           <Route path="/" exact>
@@ -36,6 +45,15 @@ let App = ({info}) => (
             <Route path="/pendaftaraninstruktur">
               {/* <Register></Register> */}
             </Route>
+            <Route path="/userdashboard" component={UserDashboard}></Route>
+            
+            <Route path='/bmicalculator' component={BMICalculator}></Route> 
+            <Route path='/caloriescalculator' component={CaloriesCalculator}></Route>
+            <Route path='/inputweightlossplan' component={InputWeightlossPlan}></Route>
+            <Route path='/inputweightrecord' component={InputWeightRecord}></Route>
+            <Route path='/instrukturdashboard' component={InstrukturDashboard}></Route>
+            <Route path='/buatkonten' component={BuatKonten}></Route>
+            <Route path='/buatprogram' component={BuatProgram}></Route>
           </Switch>
           <Footer />
         </Router>

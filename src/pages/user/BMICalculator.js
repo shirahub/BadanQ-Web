@@ -1,6 +1,6 @@
 import React, { Component } from 'react'
 
- class BMICalculator extends Component {
+class BMICalculator extends Component {
     render() {
         return (
             <div>
@@ -17,4 +17,4 @@ import React, { Component } from 'react'
     }
 }
 
-export default BMICalculator
+export default BMICalculator;

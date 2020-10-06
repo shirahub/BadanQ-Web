@@ -9,9 +9,13 @@ let Header = ({ info }) => (
         {console.log(info)}
         <div className="logo">
             <Link to="/">
-                <img src={Logo} />
-                <h1>BadanQ</h1>
-                <h2>Beautiful Mind, Beautiful Body</h2>
+                <div style={{display:"flex"}}>
+                    <img src={Logo} style={{display:"inline", height:"80px", marginTop:"10px"}} />
+                    <div style={{display:"unset", marginTop:"10px"}}>
+                        <h1>BadanQ</h1>
+                        <h2>Beautiful Mind, Beautiful Body</h2>
+                    </div>
+                </div>
             </Link>
         </div>
         <div className="login">
