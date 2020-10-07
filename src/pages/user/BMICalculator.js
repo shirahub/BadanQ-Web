@@ -2,8 +2,25 @@ import React, { Component } from 'react'
 import '../Login.css'
 
  class BMICalculator extends Component {
+    constructor() {
+        super();
+        this.state = {
+            beratbadan:"",
+            tinggibadan:"",
+            bmi:""
+        }
+    }
+    setValue = (e) =>{
+        this.setState({
+            [e.name]:e.value
+        })
+    }
     calculatorBMI = () => {
-        
+        const {beratbadan,tinggibadan} = this.state
+        let bmitemp = beratbadan/((tinggibadan*tinggibadan)/100000)
+        this.setState({
+            bmi:bmitemp
+        })
     }
 
     render() {
@@ -17,13 +34,17 @@ import '../Login.css'
                 >
                     <form>
                         <h1>Kalkulator BMI</h1>
-                        <input type ="Berat Badan" placeholder="Email"/>
-                        <input type ="Tinggi Badan" placeholder="Password"/>
-                        <button onClick = {() => this.calculatorBMI}>Hitung</button>
+                        <label>Berat Badan</label>
+                        <input name ="beratbadan" type="number" onChange={(e) => this.setValue(e.target)}/>
+                        <label>Tinggi Badan</label>
+                        <input name ="tinggibadan" type="number"onChange={(e) => this.setValue(e.target)}/>
+                        <button onClick = {() => this.calculatorBMI()}>Hitung</button>
                     </form>
                 </div>
                 <div>
-                    
+                    <h1>
+                    {this.state.bmi}
+                    </h1>
                 </div>
             </div>
         )
