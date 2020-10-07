@@ -1,10 +1,10 @@
 import React, { Component } from 'react'
 
- class InputWeightlossPlan extends Component {
+ class LihatUser extends Component {
     render() {
         return (
             <div>
-                <h1>Catatan Berat Badan</h1>
+                <h1>Lihat User</h1>
                 <form>
                     <input type ="email" placeholder="Email"/>
                     <br />
@@ -17,4 +17,4 @@ import React, { Component } from 'react'
     }
 }
 
-export default InputWeightlossPlan
+export default LihatUser

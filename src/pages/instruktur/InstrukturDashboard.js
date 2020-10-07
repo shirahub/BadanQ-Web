@@ -6,7 +6,7 @@ import {
 } from 'react-router-dom'; 
 import '../../styles/UserDashboard.css'
 
- class UserDashboard extends Component {
+ class InstrukturDashboard extends Component {
      constructor(props) {
          super(props)
      
@@ -66,4 +66,4 @@ import '../../styles/UserDashboard.css'
 }
 
 
-export default UserDashboard
+export default InstrukturDashboard

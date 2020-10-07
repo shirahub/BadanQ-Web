@@ -32,4 +32,3 @@ Home = connect(mapStateToProps)(Home)
 
 export default Home;
 
-
