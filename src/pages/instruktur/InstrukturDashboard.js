@@ -44,7 +44,7 @@ import '../../styles/UserDashboard.css'
                     float:"rignt",
                     width:"80%"
                 }}>
-                    <img src="https://image.freepik.com/free-vector/group-therapy-support-concept_74855-6487.jpg"
+                    <img src="https://image.freepik.com/free-vector/teacher-kids-sitting-yoga-pose-isolated-flat-vector-illustration-cartoon-instructor-children-doing-exercise-gym_74855-8597.jpg"
                         alt="user-dashboard"
                         style={{height:"400px"}}
                     />

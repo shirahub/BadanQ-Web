@@ -17,7 +17,7 @@ label{
     
 }
 
-input, textarea{
+input, textarea, select{
     border-radius: 5px;
     height: 30px;
     width: 80%;
