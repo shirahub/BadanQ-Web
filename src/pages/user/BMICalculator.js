@@ -38,7 +38,7 @@ import '../Login.css'
                         <input name ="beratbadan" type="number" onChange={(e) => this.setValue(e.target)}/>
                         <label>Tinggi Badan</label>
                         <input name ="tinggibadan" type="number"onChange={(e) => this.setValue(e.target)}/>
-                        <button onClick = {() => this.calculatorBMI()}>Hitung</button>
+                        <button onClick = {this.calculatorBMI}>Hitung</button>
                     </form>
                 </div>
                 <div>

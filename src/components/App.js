@@ -34,35 +34,41 @@ let App = ({info}) => (
       {/* <FirebaseContext.Consumer>
         {checkFirebase()}
       </FirebaseContext.Consumer> */}
-          <Header />
-          <Switch>
-          <Route path="/" exact>
-            <Home></Home>
-            </Route>
-            <Route path="/login">
-              <Login></Login>
-            </Route>
-            <Route path="/logout">
-              <Logout></Logout>
-            </Route>
-            <Route path="/daftarbaru">
-              <DaftarBaru></DaftarBaru>
-            </Route>
-            <Route path="/pendaftaraninstruktur">
-              {/* <Register></Register> */}
-            </Route>
-            <Route path='/userdashboard' component={UserDashboard}></Route>
-            <Route path='/bmicalculator' component={BMICalculator}></Route> 
-            <Route path='/caloriescalculator' component={CaloriesCalculator}></Route>
-            <Route path='/inputweightlossplan' component={InputWeightlossPlan}></Route>
-            <Route path='/inputweightrecord' component={InputWeightRecord}></Route>
-            
-            <Route path='/instrukturdashboard' component={InstrukturDashboard}></Route> 
-            <Route path='/buatkonten' component={BuatKonten}></Route>
-            <Route path='/buatprogram' component={BuatProgram}></Route>
-            <Route path='/lihatuser' component={LihatUser}></Route>
-          </Switch>
-          <Footer />
+          <div >
+            <Header />
+          </div>
+          <div>
+            <Switch>
+            <Route path="/" exact>
+              <Home></Home>
+              </Route>
+              <Route path="/login">
+                <Login></Login>
+              </Route>
+              <Route path="/logout">
+                <Logout></Logout>
+              </Route>
+              <Route path="/daftarbaru">
+                <DaftarBaru></DaftarBaru>
+              </Route>
+              <Route path="/pendaftaraninstruktur">
+                {/* <Register></Register> */}
+              </Route>
+              <Route path='/userdashboard' component={UserDashboard}></Route>
+              <Route path='/bmicalculator' component={BMICalculator}></Route> 
+              <Route path='/caloriescalculator' component={CaloriesCalculator}></Route>
+              <Route path='/inputweightlossplan' component={InputWeightlossPlan}></Route>
+              <Route path='/inputweightrecord' component={InputWeightRecord}></Route>
+              
+              <Route path='/instrukturdashboard' component={InstrukturDashboard}></Route> 
+              <Route path='/buatkonten' component={BuatKonten}></Route>
+              <Route path='/buatprogram' component={BuatProgram}></Route>
+              <Route path='/lihatuser' component={LihatUser}></Route>
+            </Switch>
+          </div>
+          <div>
+            <Footer />
+          </div>
         </Router>
   </div>
 
