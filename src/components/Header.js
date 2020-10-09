@@ -10,17 +10,7 @@ let Header = ({ info }) => (
         {console.log(info)}
         <div className="logo">
             <Link to="/">
-<<<<<<< HEAD
-                <div style={{display:"flex"}}>
-                    <img src={Logo} style={{display:"inline", height:"80px", marginTop:"10px"}} />
-                    <div style={{display:"unset", marginTop:"10px"}}>
-                        <h1>BadanQ</h1>
-                        <h2>Beautiful Mind, Beautiful Body</h2>
-                    </div>
-                </div>
-=======
                 <img className="img-logo" src={Logo} />
->>>>>>> dianp
             </Link>
             <h3 style={{color:"#0765ad"}}>Let's Be Healty</h3>
         </div>

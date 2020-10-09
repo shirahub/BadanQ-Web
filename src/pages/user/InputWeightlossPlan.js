@@ -4,7 +4,7 @@ import React, { Component } from 'react'
     render() {
         return (
             <div>
-                <h1>Catatan Berat Badan</h1>
+                <h1>Catatan Rencana Berat Badan</h1>
                 <form>
                     <input type ="email" placeholder="Email"/>
                     <br />

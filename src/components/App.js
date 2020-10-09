@@ -16,10 +16,10 @@ import DaftarBaru from '../pages/DaftarBaru';
 //   InputWeightRecord,
 //   InputWeightlossPlan
 // }from '../pages/user'
-import BMICalculator from "../pages/user/BMICalculator"
-import CaloriesCalculator from "../pages/user/CaloriesCalculator"
-import InputWeightRecord from "../pages/user/InputWeightRecord"
-import InputWeightlossPlan from "../pages/user/InputWeightlossPlan"
+// import BMICalculator from "../pages/user/BMICalculator"
+// import CaloriesCalculator from "../pages/user/CaloriesCalculator"
+// import InputWeightRecord from "../pages/user/InputWeightRecord"
+// import InputWeightlossPlan from "../pages/user/InputWeightlossPlan"
 import { FirebaseContext } from '../config';
 import CaloriesCalculator from '../pages/user/CaloriesCalculator';
 import InputWeightlossPlan from '../pages/user/InputWeightlossPlan';
@@ -32,27 +32,29 @@ import BuatProgram from '../pages/instruktur/BuatProgram';
 import LihatUser from '../pages/instruktur/LihatUser';
 
 let App = ({info}) => (
+  
   <div >
+
     <Router>
       {/* < HEAD */}
-      {/* {userOn(info.isLogin)} */}
-      {/* <FirebaseContext.Consumer>
-        {checkFirebase()}
-      </FirebaseContext.Consumer>/>
+      {userOn(info.isLogin)}
+      {/* <FirebaseContext.Consumer> */}
+        {/* {checkFirebase()} */}
+      {/* </FirebaseContext.Consumer> */}
         <div>
           <Header />
           <Switch>
           <Route path="/" exact>
-            <Home></Home>
+            <Home/>
             </Route>
             <Route path="/login">
-              <Login></Login>
+              <Login/>
             </Route>
             <Route path="/logout">
-              <Logout></Logout>
+              <Logout/>
             </Route>
             <Route path="/daftarbaru">
-              <DaftarBaru></DaftarBaru>
+              <DaftarBaru/>
             </Route>
             <Route path="/pendaftaraninstruktur">
               {/* <Register></Register> */}

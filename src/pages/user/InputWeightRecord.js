@@ -4,7 +4,7 @@ import React, { Component } from 'react'
     render() {
         return (
             <div>
-                <h1>Catatan Program</h1>
+                <h1>Catatan Berat Badan</h1>
                 <form>
                     <input type ="date" name="tanggal" placeholder="Password"/>
                     <button >Simpan</button>

@@ -9,11 +9,7 @@
     "@testing-library/react": "^9.3.2",
     "@testing-library/user-event": "^7.1.2",
     "antd": "^4.6.6",
-<<<<<<< HEAD
-    "firebase": "^7.22.0",
-=======
     "firebase": "^7.22.1",
->>>>>>> dianp
     "firebase-admin": "^9.2.0",
     "react": "^16.13.1",
     "react-animated-slider": "^2.0.0",

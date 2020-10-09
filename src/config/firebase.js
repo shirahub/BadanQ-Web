@@ -10,6 +10,7 @@ const firebaseConfig = {
     storageBucket: process.env.REACT_APP_FIREBASE_STORAGE_BUCKET
 }
 
+
 class Firebase {
     constructor() {
         if (!app.apps.length) {
@@ -20,7 +21,8 @@ class Firebase {
     }
 
     loginFirebaseUser = (email, password) => {
-        return this.auth.signInWithEmailAndPassword(email, password).
+        console.log(email, password);
+       this.auth.signInWithEmailAndPassword(email, password).
         then (function () {
             console.log("Sign in success")
         }
