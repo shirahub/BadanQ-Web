@@ -14,10 +14,61 @@ class Firebase {
     constructor() {
         if (!app.apps.length) {
             app.initializeApp(firebaseConfig);
-          }
+        }
         this.auth = app.auth()
         this.db = app.database();
+    }
 
+    loginFirebaseUser = (email, password) => {
+        return this.auth.signInWithEmailAndPassword(email, password).
+        then (function () {
+            console.log("Sign in success")
+        }
+        ).
+        catch(function (error) {
+            var errorCode = error.code;
+            var errorMessage = error.message;
+            if (errorCode === 'auth/wrong-password') {
+                alert('Wrong password.');
+            } else {
+                alert(errorMessage);
+            }
+        })
+    }
+
+    logoutFirebaseUser = () => {
+        this.auth.signOut().then(function () {
+            console.log("Sign Out Success");
+        }).catch(function (error) {
+            console.log(error);
+        });
+    }
+
+    getCurrentUser = () => {
+        var user = this.auth.currentUser;
+        if (user) {
+            console.log("ada user")
+            return user.email
+        } else {
+            console.log("ga ada user")
+            return ''
+        }
+    }
+
+    getUserRole = async (email) => {
+        var role = '';
+        var rootRef = this.db.ref();
+        var urlRef = rootRef.child("users");
+        await urlRef.once("value", function (snapshot) {
+            snapshot.forEach(function (child) {
+                if (child.val().email === email) {
+                    console.log("found")
+                    role = child.val().role
+                }
+            });
+        });
+        console.log("role", role)
+        return role
     }
 
     registerFirebaseUser = (email, password) => {
@@ -40,6 +91,11 @@ class Firebase {
         });
     }
 
+    // getCurrentUserData = () => {
+    //     var user = {};
+
+    // }
+
     getAllUser = () => {
         var array = [];
         var rootRef = this.db.ref();
@@ -59,7 +115,7 @@ class Firebase {
         var urlRef = rootRef.child("users");
         await urlRef.once("value", function (snapshot) {
             snapshot.forEach(function (child) {
-            //     console.log(child.key + ": " + child.val());
+                //     console.log(child.key + ": " + child.val());
                 if (child.val().email === email) {
                     console.log("found")
                     id = child.key

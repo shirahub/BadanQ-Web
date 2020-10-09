@@ -6,11 +6,8 @@ import React, { Component } from 'react'
             <div>
                 <h1>Catatan Program</h1>
                 <form>
-                    <input type ="email" placeholder="Email"/>
-                    <br />
-                    <input type ="password" placeholder="Password"/>
-                    <br />
-                    <button >Hitung</button>
+                    <input type ="date" name="tanggal" placeholder="Password"/>
+                    <button >Simpan</button>
                 </form>
             </div>
         )

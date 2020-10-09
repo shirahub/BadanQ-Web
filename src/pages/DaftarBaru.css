@@ -44,7 +44,7 @@ input{
     padding: 0px 1rem;
     min-width: 100px;
     min-height: 30px;
-    border-radius: 0.25rem;
+    border-radius: 20px;
     transition: color 0.15s ease-in-out 0s, background-color 0.15s ease-in-out 0s, border-color 0.15s ease-in-out 0s, box-shadow 0.15s ease-in-out 0s;
     cursor: pointer;
     color: rgb(255, 255, 255);
@@ -64,6 +64,7 @@ input{
     margin-bottom:"100%";
     width: 20%;
     max-width: 384px;
+    color:#0765ad
     }
 
 * {

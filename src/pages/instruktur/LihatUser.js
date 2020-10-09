@@ -1,20 +1,11 @@
 import React, { Component } from 'react'
 
-<<<<<<< HEAD
-class BuatProgram extends Component {
+ class LihatUser extends Component {
     render() {
         return (
             <div>
+                <h1>Lihat User</h1>
                 <form>
-                    <h1>Kalkulator BMI</h1>
-=======
- class BuatProgram extends Component {
-    render() {
-        return (
-            <div>
-                <h1>Buat Program</h1>
-                <form>
->>>>>>> dianp
                     <input type ="email" placeholder="Email"/>
                     <br />
                     <input type ="password" placeholder="Password"/>
@@ -26,8 +17,4 @@ class BuatProgram extends Component {
     }
 }
 
-<<<<<<< HEAD
-export default BuatProgram;
-=======
-export default BuatProgram
->>>>>>> dianp
+export default LihatUser

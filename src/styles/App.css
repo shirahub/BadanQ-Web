@@ -71,9 +71,16 @@ header {
   letter-spacing: 1px;
 }
 
-.login, .logout {
-  margin-top: 25px;
-  margin-right: 50px;
+.button-header {
+  font-size: 20px;
+  background-color: rgb(40, 128, 206);
+  border-radius: 30px;
+  margin: 5px;
+  padding: 10px;
+}
+
+.button-header p {
+  color: #FFFFFF;
 }
 
 img {

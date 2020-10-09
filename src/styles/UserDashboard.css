@@ -1,0 +1,12 @@
+.menu-container{
+    font-style: none;
+    height: 100%;
+}
+
+.menu-list{
+    border-bottom: 1px solid black;
+    height: 50px;
+    font-style: unset;
+}
+
+

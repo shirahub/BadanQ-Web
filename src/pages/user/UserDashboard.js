@@ -4,6 +4,7 @@ import {
     Link, 
     Redirect 
 } from 'react-router-dom'; 
+import '../../styles/UserDashboard.css'
 
  class UserDashboard extends Component {
      constructor(props) {
@@ -19,30 +20,27 @@ import {
             return <Redirect to={this.state.redirect} />
         }
         return (
-            <div>
+            <div style={{display:"flex"}}>
                 
                 <div style={{
-                    display:"flex",
                     float:"left",
                     width:"20%"
                 }}>
                     <Router>
-                        <div className="App"> 
-                            <ul style={{fontStyle:"none"}}> 
-                                <li> 
+                            <ul className="menu-container"> 
+                                <li className="menu-list"> 
                                     <Link redirect to="/bmicalculator" onClick={() => this.setState({redirect:"/bmicalculator"})}>BMICalculator</Link> 
                                 </li> 
-                                <li> 
+                                <li className="menu-list"> 
                                     <Link redirect to="/caloriescalculator" onClick={() => this.setState({redirect:"/caloriescalculator"})}>Kalkulator Kalori</Link> 
                                 </li> 
-                                <li> 
-                                    <Link redirect to="/inputweightlossprogram" onClick={() => this.setState({redirect:"/inputweightlossprogram"})}>Love Body Program</Link> 
+                                <li className="menu-list"> 
+                                    <Link redirect to="/inputweightlossplan" onClick={() => this.setState({redirect:"/inputweightlossplan"})}>Love Body Program</Link> 
                                 </li> 
-                                <li> 
+                                <li className="menu-list"> 
                                     <Link redirect to="/inputweightrecord" onClick={() => this.setState({redirect:"/inputweightrecord"})}>Weight Program</Link> 
                                 </li> 
                             </ul> 
-                        </div> 
                         {/* <Switch>
                             <Route path='/bmicalculator' component={BMICalculator}></Route> 
                             <Route path='/caloriescalculator' component={CaloriesCalculator}></Route>
@@ -53,12 +51,12 @@ import {
                     </Router>
                 </div>
                 <div style={{
-                    display:"flex",
                     float:"rignt",
                     width:"80%"
                 }}>
-                    <img src="https://image.freepik.com/free-vector/tiny-people-choosing-food-ketogenic-diet_74855-7878.jpg"
+                    <img src="https://image.freepik.com/free-vector/group-therapy-support-concept_74855-6487.jpg"
                         alt="user-dashboard"
+                        style={{height:"400px"}}
                     />
                 </div>
                 
