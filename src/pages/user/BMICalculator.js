@@ -5,9 +5,9 @@ import '../Login.css'
     constructor() {
         super();
         this.state = {
-            beratbadan:"",
-            tinggibadan:"",
-            bmi:""
+            beratbadan:0,
+            tinggibadan:0,
+            bmi:0
         }
     }
     setValue = (e) =>{
@@ -15,7 +15,8 @@ import '../Login.css'
             [e.name]:e.value
         })
     }
-    calculatorBMI = () => {
+    calculatorBMI = (evt) => {
+        evt.preventDefault()
         const {beratbadan,tinggibadan} = this.state
         let bmitemp = beratbadan/((tinggibadan*tinggibadan)/100000)
         this.setState({
@@ -38,7 +39,7 @@ import '../Login.css'
                         <input name ="beratbadan" type="number" onChange={(e) => this.setValue(e.target)}/>
                         <label>Tinggi Badan</label>
                         <input name ="tinggibadan" type="number"onChange={(e) => this.setValue(e.target)}/>
-                        <button onClick = {this.calculatorBMI}>Hitung</button>
+                        <button onClick = {(evt) => this.calculatorBMI(evt)}>Hitung</button>
                     </form>
                 </div>
                 <div>

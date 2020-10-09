@@ -58,7 +58,6 @@ let App = ({info}) => (
             <Route path='/buatprogram' component={BuatProgram}></Route>
             <Route path='/lihatuser' component={LihatUser}></Route>
           </Switch>
-      
           </div>
           <div>
             <Footer />

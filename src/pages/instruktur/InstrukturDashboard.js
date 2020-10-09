@@ -29,25 +29,15 @@ import '../../styles/UserDashboard.css'
                     <Router>
                             <ul className="menu-container"> 
                                 <li className="menu-list"> 
-                                    <Link redirect to="/bmicalculator" onClick={() => this.setState({redirect:"/bmicalculator"})}>BMICalculator</Link> 
+                                    <Link redirect to="/buatkonten" onClick={() => this.setState({redirect:"/buatkonten"})}>Buat Konten</Link> 
                                 </li> 
                                 <li className="menu-list"> 
-                                    <Link redirect to="/caloriescalculator" onClick={() => this.setState({redirect:"/caloriescalculator"})}>Kalkulator Kalori</Link> 
+                                    <Link redirect to="/buatprogram" onClick={() => this.setState({redirect:"/buatprogram"})}>Buat Program</Link> 
                                 </li> 
                                 <li className="menu-list"> 
-                                    <Link redirect to="/inputweightlossplan" onClick={() => this.setState({redirect:"/inputweightlossplan"})}>Love Body Program</Link> 
-                                </li> 
-                                <li className="menu-list"> 
-                                    <Link redirect to="/inputweightrecord" onClick={() => this.setState({redirect:"/inputweightrecord"})}>Weight Program</Link> 
+                                    <Link redirect to="/lihatuser" onClick={() => this.setState({redirect:"/lihatuser"})}>Lihat User</Link> 
                                 </li> 
                             </ul> 
-                        {/* <Switch>
-                            <Route path='/bmicalculator' component={BMICalculator}></Route> 
-                            <Route path='/caloriescalculator' component={CaloriesCalculator}></Route>
-                            <Route path='/inputweightlossprogram' component={InputWeightlossProgram}></Route>
-                            <Route path='/inputweightrecord' component={InputWeightRecord}></Route>
-                            
-                        </Switch> */}
                     </Router>
                 </div>
                 <div style={{

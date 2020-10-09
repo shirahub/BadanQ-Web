@@ -6,11 +6,15 @@ import React, { Component } from 'react'
             <div>
                 <h1>Buat Konten</h1>
                 <form>
-                    <input type ="email" placeholder="Email"/>
+                    <label>Judul</label>
+                    <input type ="text" />
                     <br />
-                    <input type ="password" placeholder="Password"/>
+                    <label>Artikel</label>
+                    <textarea style={{height:"250px"}} />
                     <br />
-                    <button >Hitung</button>
+                    <label>Gambar</label>
+                    <input type ="text"/>
+                    <button className="button" >submit</button>
                 </form>
             </div>
         )

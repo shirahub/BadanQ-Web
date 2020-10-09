@@ -4,10 +4,13 @@ import React, { Component } from 'react'
     render() {
         return (
             <div>
-                <h1>Catatan Program</h1>
+                <h1>History Berat Badan</h1>
                 <form>
-                    <input type ="date" name="tanggal" placeholder="Password"/>
-                    <button >Simpan</button>
+                    <label>Tanggal</label>
+                    <input type ="date"/>
+                    <label>Berat Badan</label>
+                    <input type ="number"/>
+                    <button className="button">Save</button>
                 </form>
             </div>
         )

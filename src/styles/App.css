@@ -172,6 +172,9 @@ html, body, .app {
    padding: 10px; 
 
 }
+h1{
+  text-align: center;
+}
 
 .popup_inner {
   position: absolute;

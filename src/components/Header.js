@@ -50,7 +50,11 @@ const isLoggedIn = (statusLogin) => {
                 <Link to="/daftarbaru"><p>Daftar</p></Link>
             </div>
             <div className="button-header">
-                <Link to="/userdashboard"><p>ke User</p></Link>
+                <Link to="/userdashboard"><p>User</p></Link>
+            </div>
+            
+            <div className="button-header">
+                <Link to="/instrukturdashboard"><p>Instruktur</p></Link>
             </div>
         </div>
     )
