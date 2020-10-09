@@ -1,9 +1,6 @@
 import React, { Component } from 'react'
 import '../Login.css'
 
-<<<<<<< HEAD
-class BMICalculator extends Component {
-=======
  class BMICalculator extends Component {
     constructor() {
         super();
@@ -26,7 +23,6 @@ class BMICalculator extends Component {
         })
     }
 
->>>>>>> dianp
     render() {
         return (
             <div>

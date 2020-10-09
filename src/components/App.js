@@ -10,17 +10,7 @@ import Login from '../pages/Login';
 import Logout from '../pages/Logout';
 import Home from '../pages/Home';
 import DaftarBaru from '../pages/DaftarBaru';
-// import {
-//   BMICalculator,
-//   CaloriesCalculator,
-//   InputWeightRecord,
-//   InputWeightlossPlan
-// }from '../pages/user'
-import BMICalculator from "../pages/user/BMICalculator"
-import CaloriesCalculator from "../pages/user/CaloriesCalculator"
-import InputWeightRecord from "../pages/user/InputWeightRecord"
-import InputWeightlossPlan from "../pages/user/InputWeightlossPlan"
-import { FirebaseContext } from '../config';
+//import { FirebaseContext } from '../config';
 import CaloriesCalculator from '../pages/user/CaloriesCalculator';
 import InputWeightlossPlan from '../pages/user/InputWeightlossPlan';
 import InputWeightRecord from '../pages/user/InputWeightRecord';
@@ -34,11 +24,12 @@ import LihatUser from '../pages/instruktur/LihatUser';
 let App = ({info}) => (
   <div >
     <Router>
-      {/* < HEAD */}
+      {/* < HEAD
       {/* {userOn(info.isLogin)} */}
       {/* <FirebaseContext.Consumer>
         {checkFirebase()}
-      </FirebaseContext.Consumer>/>
+      </FirebaseContext.Consumer>/> } */}
+
         <div>
           <Header />
           <Switch>
@@ -55,7 +46,6 @@ let App = ({info}) => (
               <DaftarBaru></DaftarBaru>
             </Route>
             <Route path="/pendaftaraninstruktur">
-              {/* <Register></Register> */}
             </Route>
             <Route path="/userdashboard" component={UserDashboard}></Route>
             
@@ -66,6 +56,7 @@ let App = ({info}) => (
             <Route path='/instrukturdashboard' component={InstrukturDashboard}></Route>
             <Route path='/buatkonten' component={BuatKonten}></Route>
             <Route path='/buatprogram' component={BuatProgram}></Route>
+            <Route path='/lihatuser' component={LihatUser}></Route>
           </Switch>
       
           </div>
@@ -83,14 +74,14 @@ let App = ({info}) => (
 //   )
 // }
 
-const userOn = (user) => {
-  console.log(user)
-  if (user !== false) {
-    return (
-      <Redirect to="/"></Redirect>
-    )
-  }
-}
+// const userOn = (user) => {
+//   console.log(user)
+//   if (user !== false) {
+//     return (
+//       <Redirect to="/"></Redirect>
+//     )
+//   }
+// }
 
 const mapStateToProps = (state) => ({
   info: state.auth
