@@ -1,4 +1,5 @@
 import React, { Component } from 'react'
+import { Link } from 'react-router-dom';
 import '../Login.css'
 
  class BMICalculator extends Component {
@@ -85,6 +86,7 @@ import '../Login.css'
                         </select>
                         <button className="button" onClick = {(evt) => this.calculatorBMI(evt)}>Hitung</button>
                     </form>
+                    
                 </div>
                 <div>
                     <h1>
@@ -93,6 +95,7 @@ import '../Login.css'
                     <br/>
                         <p>Kondisi anda saat ini : {this.state.status}</p>
                     </h1>
+                    <Link className="button" to="/userdashboard">Back</Link>
                 </div>
             </div>
         )

@@ -1,4 +1,5 @@
 import React, { Component } from 'react'
+import { Link } from 'react-router-dom'
 
  class CaloriesCalculator extends Component {
     render() {
@@ -12,6 +13,7 @@ import React, { Component } from 'react'
                     <br />
                     <button >Hitung</button>
                 </form>
+                <Link className="button" to="/userdashboard">Back</Link>
             </div>
         )
     }
